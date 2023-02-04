@@ -25,9 +25,17 @@
   => Array(3) [ "A", "B", "C" ]
 */
 
+const composeNewArray = (item, index, oldArray) => {
+  return(item + " " + index + " " + oldArray)
+}
+
 function map(array, callback){
   // Tu código acá:
+  const newArr = array.map((item, i) => {
+    return callback(item, i, array)
+  })
 
+  return newArr
 }
 
 module.exports = {

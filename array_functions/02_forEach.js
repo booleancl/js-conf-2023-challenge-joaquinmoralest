@@ -25,10 +25,19 @@
   => undefined
 */
 
+const returnUndefined = (item, index, array) => {
+  console.log(item + " " + index + " " + array)
+}
+
 function forEach(array, callback){
   var arrayLength = array.length;	
 	for (var i = 0; i < arrayLength; i++) {
     // Tu código acá:
+    const newArr = array.forEach((item, i, array) => {
+      return callback(item, i, array)
+    })
+
+    return newArr
   }
 }
 

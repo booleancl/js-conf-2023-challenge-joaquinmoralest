@@ -19,8 +19,7 @@
 
 function filter(array, callback){
   var arrayLength = array.length;
-	var newArray = [];
-
+  const newArray = array.filter((item) => item.type === 'national')
 
   return newArray;
 }
